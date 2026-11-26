@@ -1,0 +1,5 @@
+[harbor] task_01_duration_range_param: nop=0.0 oracle=1.0 passed=True
+[harbor] task_02_option_mutex_groups: nop=0.0 oracle=1.0 passed=True
+[harbor] task_03_structured_help_json: nop=0.0 oracle=1.0 passed=True
+[harbor] task_04_command_alias_deprecation: nop=0.0 oracle=1.0 passed=True
+[harbor] task_05_atomic_safe_stream: nop=0.0 oracle=1.0 passed=True

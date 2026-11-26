@@ -43,6 +43,24 @@ PYTHONPATH=src .venv/bin/harborforge generate \
 | `task_05_atomic_safe_stream` | 3 | 3 | 100.0% |
 | **Total** | **26** | **27** | **96.3%** |
 
+## Harbor v0.25.0 Containerized Docker Validation
+
+Command executed (with Docker Engine `29.9.3` and `harbor==0.25.0`):
+
+```bash
+PATH=".venv/bin:$PATH" PYTHONPATH=src .venv/bin/harborforge verify --tasks-dir sample_tasks --mode harbor
+```
+
+Each task was built in an isolated Docker container (`FROM python:3.11-slim`) and evaluated with both `harbor run -p <task_dir> -a nop -k 1` and `harbor run -p <task_dir> -a oracle -k 1`:
+
+```text
+[harbor] task_01_duration_range_param: nop=0.0 oracle=1.0 passed=True
+[harbor] task_02_option_mutex_groups: nop=0.0 oracle=1.0 passed=True
+[harbor] task_03_structured_help_json: nop=0.0 oracle=1.0 passed=True
+[harbor] task_04_command_alias_deprecation: nop=0.0 oracle=1.0 passed=True
+[harbor] task_05_atomic_safe_stream: nop=0.0 oracle=1.0 passed=True
+```
+
 ## Automated Pipeline Unit & Integration Tests
 
 Command executed:
@@ -63,3 +81,4 @@ During initial verification against `pallets/click@8.1.8`:
 
 - [`validation_evidence/validation_summary.json`](../validation_evidence/validation_summary.json)
 - [`validation_evidence/generate_verify_mutate.log`](../validation_evidence/generate_verify_mutate.log)
+- [`validation_evidence/harbor_docker_verify.log`](../validation_evidence/harbor_docker_verify.log)
