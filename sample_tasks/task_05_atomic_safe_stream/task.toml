@@ -1,0 +1,30 @@
+schema_version = "1.4"
+
+[task]
+name = "harborforge/atomic-safe-stream"
+description = "Bounded Rollback-Safe File Output Helper"
+version = "0.1.0"
+
+[metadata]
+author_name = "HarborForge Pipeline"
+repository = "https://github.com/pallets/click.git"
+base_commit = "934813e4d421071a1b3db3973c02fe2721359a6e"
+branch_or_tag = "8.1.8"
+license = "BSD-3-Clause"
+subsystem = "click._compat"
+behavioral_axis = "runtime_utilities"
+feature_category = "feature-development"
+generator_model = "offline-deterministic-template"
+tags = ["python", "feature-development", "runtime_utilities"]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240

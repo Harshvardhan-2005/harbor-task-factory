@@ -1,0 +1,4 @@
+[
+  "tests/test_hf_atomic_safe_stream.py::test_atomic_write_commits_on_success",
+  "tests/test_hf_atomic_safe_stream.py::test_atomic_write_rolls_back_on_error"
+]

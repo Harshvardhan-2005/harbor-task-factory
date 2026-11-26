@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harborforge"
+version = "0.1.0"
+description = "Automated AST-guided, mutation-verified Harbor v0.25.x Coding Task Factory"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+harbor = [
+  "harbor==0.25.*",
+  "pytest>=8.0",
+]
+
+[project.scripts]
+harborforge = "harborforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

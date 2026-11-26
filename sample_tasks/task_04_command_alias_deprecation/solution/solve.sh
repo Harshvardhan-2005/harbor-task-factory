@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "${HARBORFORGE_WORKDIR:-/app}"
+git apply --whitespace=nowarn - <<'HARBORFORGE_PATCH_EOF_9F3A'
+diff --git a/src/click/decorators.py b/src/click/decorators.py
+--- a/src/click/decorators.py
++++ b/src/click/decorators.py
+@@ -560,3 +560,24 @@
+     """
+     kwargs.setdefault("cls", HelpOption)
+     return option(*param_decls, **kwargs)
++
++
++class AliasRegistry:
++    """Registry mapping command aliases to primary command names with optional deprecation flags."""
++
++    def __init__(self) -> None:
++        self._aliases: dict[str, tuple[str, bool]] = {}
++
++    def register(self, alias: str, target: str, *, deprecated: bool = False) -> None:
++        if not alias or not target:
++            raise ValueError("Alias and target must be non-empty.")
++        if alias in self._aliases and self._aliases[alias][0] != target:
++            raise ValueError(f"Alias '{alias}' is already bound to '{self._aliases[alias][0]}'.")
++        self._aliases[alias] = (target, deprecated)
++
++    def resolve(self, name: str) -> tuple[str, str | None]:
++        if name not in self._aliases:
++            return name, None
++        target, deprecated = self._aliases[name]
++        warning = f"Warning: alias '{name}' is deprecated; use '{target}' instead." if deprecated else None
++        return target, warning
+HARBORFORGE_PATCH_EOF_9F3A

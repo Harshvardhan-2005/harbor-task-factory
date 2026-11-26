@@ -1,0 +1,439 @@
+{
+  "repository": "https://github.com/pallets/click.git",
+  "base_commit": "934813e4d421071a1b3db3973c02fe2721359a6e",
+  "task_count": 5,
+  "verifications": [
+    {
+      "task_id": "task_01_duration_range_param",
+      "mode": "local",
+      "nop_reward": 0.0,
+      "oracle_reward": 1.0,
+      "passed": true,
+      "nop_details": {
+        "reason": "collection_errors",
+        "collection_errors": [
+          "tests/test_hf_duration_range_param.py"
+        ],
+        "reward": 0.0
+      },
+      "oracle_details": {
+        "reason": "scored",
+        "reward": 1.0,
+        "fail_to_pass_passed": 3,
+        "fail_to_pass_total": 3,
+        "fail_to_pass_failed": [],
+        "pass_to_pass_total": 20
+      },
+      "error_message": ""
+    },
+    {
+      "task_id": "task_02_option_mutex_groups",
+      "mode": "local",
+      "nop_reward": 0.0,
+      "oracle_reward": 1.0,
+      "passed": true,
+      "nop_details": {
+        "reason": "collection_errors",
+        "collection_errors": [
+          "tests/test_hf_option_mutex_groups.py"
+        ],
+        "reward": 0.0
+      },
+      "oracle_details": {
+        "reason": "scored",
+        "reward": 1.0,
+        "fail_to_pass_passed": 3,
+        "fail_to_pass_total": 3,
+        "fail_to_pass_failed": [],
+        "pass_to_pass_total": 20
+      },
+      "error_message": ""
+    },
+    {
+      "task_id": "task_03_structured_help_json",
+      "mode": "local",
+      "nop_reward": 0.0,
+      "oracle_reward": 1.0,
+      "passed": true,
+      "nop_details": {
+        "reason": "collection_errors",
+        "collection_errors": [
+          "tests/test_hf_structured_help_json.py"
+        ],
+        "reward": 0.0
+      },
+      "oracle_details": {
+        "reason": "scored",
+        "reward": 1.0,
+        "fail_to_pass_passed": 2,
+        "fail_to_pass_total": 2,
+        "fail_to_pass_failed": [],
+        "pass_to_pass_total": 20
+      },
+      "error_message": ""
+    },
+    {
+      "task_id": "task_04_command_alias_deprecation",
+      "mode": "local",
+      "nop_reward": 0.0,
+      "oracle_reward": 1.0,
+      "passed": true,
+      "nop_details": {
+        "reason": "collection_errors",
+        "collection_errors": [
+          "tests/test_hf_command_alias_deprecation.py"
+        ],
+        "reward": 0.0
+      },
+      "oracle_details": {
+        "reason": "scored",
+        "reward": 1.0,
+        "fail_to_pass_passed": 2,
+        "fail_to_pass_total": 2,
+        "fail_to_pass_failed": [],
+        "pass_to_pass_total": 20
+      },
+      "error_message": ""
+    },
+    {
+      "task_id": "task_05_atomic_safe_stream",
+      "mode": "local",
+      "nop_reward": 0.0,
+      "oracle_reward": 1.0,
+      "passed": true,
+      "nop_details": {
+        "reason": "collection_errors",
+        "collection_errors": [
+          "tests/test_hf_atomic_safe_stream.py"
+        ],
+        "reward": 0.0
+      },
+      "oracle_details": {
+        "reason": "scored",
+        "reward": 1.0,
+        "fail_to_pass_passed": 2,
+        "fail_to_pass_total": 2,
+        "fail_to_pass_failed": [],
+        "pass_to_pass_total": 20
+      },
+      "error_message": ""
+    }
+  ],
+  "mutations": [
+    {
+      "task_id": "task_01_duration_range_param",
+      "total_mutants": 6,
+      "killed_mutants": 5,
+      "survived_mutants": 1,
+      "kill_rate": 0.8333,
+      "outcomes": [
+        {
+          "mutant_id": "M01",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/types.py",
+          "lineno": 1099,
+          "description": "Replace raise with pass at line 1099",
+          "killed": false,
+          "reward": 1.0,
+          "error": ""
+        },
+        {
+          "mutant_id": "M02",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/types.py",
+          "lineno": 1109,
+          "description": "Replace raise with pass at line 1109",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M03",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/types.py",
+          "lineno": 1115,
+          "description": "Replace raise with pass at line 1115",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M04",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/types.py",
+          "lineno": 1118,
+          "description": "Replace raise with pass at line 1118",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M05",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/types.py",
+          "lineno": 1120,
+          "description": "Replace raise with pass at line 1120",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M06",
+          "operator": "CompareFlip",
+          "file_path": "src/click/types.py",
+          "lineno": 1108,
+          "description": "Flip comparison operator at line 1108",
+          "killed": true,
+          "reward": 0.0,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "task_id": "task_02_option_mutex_groups",
+      "total_mutants": 6,
+      "killed_mutants": 6,
+      "survived_mutants": 0,
+      "kill_rate": 1.0,
+      "outcomes": [
+        {
+          "mutant_id": "M01",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/core.py",
+          "lineno": 3060,
+          "description": "Replace raise with pass at line 3060",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M02",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/core.py",
+          "lineno": 3066,
+          "description": "Replace raise with pass at line 3066",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M03",
+          "operator": "CompareFlip",
+          "file_path": "src/click/core.py",
+          "lineno": 3059,
+          "description": "Flip comparison operator at line 3059",
+          "killed": true,
+          "reward": 0.3333,
+          "error": ""
+        },
+        {
+          "mutant_id": "M04",
+          "operator": "CompareFlip",
+          "file_path": "src/click/core.py",
+          "lineno": 3064,
+          "description": "Flip comparison operator at line 3064",
+          "killed": true,
+          "reward": 0.6667,
+          "error": ""
+        },
+        {
+          "mutant_id": "M05",
+          "operator": "BoolOpFlip",
+          "file_path": "src/click/core.py",
+          "lineno": 3057,
+          "description": "Flip boolean operator at line 3057",
+          "killed": true,
+          "reward": 0.3333,
+          "error": ""
+        },
+        {
+          "mutant_id": "M06",
+          "operator": "BoolOpFlip",
+          "file_path": "src/click/core.py",
+          "lineno": 3061,
+          "description": "Flip boolean operator at line 3061",
+          "killed": true,
+          "reward": 0.3333,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "task_id": "task_03_structured_help_json",
+      "total_mutants": 6,
+      "killed_mutants": 6,
+      "survived_mutants": 0,
+      "kill_rate": 1.0,
+      "outcomes": [
+        {
+          "mutant_id": "M01",
+          "operator": "BoolOpFlip",
+          "file_path": "src/click/formatting.py",
+          "lineno": 322,
+          "description": "Flip boolean operator at line 322",
+          "killed": true,
+          "reward": 0.0,
+          "error": ""
+        },
+        {
+          "mutant_id": "M02",
+          "operator": "ReturnNone",
+          "file_path": "src/click/formatting.py",
+          "lineno": 326,
+          "description": "Replace return value with None at line 326",
+          "killed": true,
+          "reward": 0.0,
+          "error": ""
+        },
+        {
+          "mutant_id": "M03",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/formatting.py",
+          "lineno": 308,
+          "description": "Mutate constant False at line 308",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M04",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/formatting.py",
+          "lineno": 309,
+          "description": "Mutate constant 2 at line 309",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M05",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/formatting.py",
+          "lineno": 318,
+          "description": "Mutate constant False at line 318",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M06",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/formatting.py",
+          "lineno": 322,
+          "description": "Mutate constant False at line 322",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "task_id": "task_04_command_alias_deprecation",
+      "total_mutants": 6,
+      "killed_mutants": 6,
+      "survived_mutants": 0,
+      "kill_rate": 1.0,
+      "outcomes": [
+        {
+          "mutant_id": "M01",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/decorators.py",
+          "lineno": 573,
+          "description": "Replace raise with pass at line 573",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M02",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/decorators.py",
+          "lineno": 575,
+          "description": "Replace raise with pass at line 575",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M03",
+          "operator": "CompareFlip",
+          "file_path": "src/click/decorators.py",
+          "lineno": 574,
+          "description": "Flip comparison operator at line 574",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M04",
+          "operator": "BoolOpFlip",
+          "file_path": "src/click/decorators.py",
+          "lineno": 572,
+          "description": "Flip boolean operator at line 572",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M05",
+          "operator": "BoolOpFlip",
+          "file_path": "src/click/decorators.py",
+          "lineno": 574,
+          "description": "Flip boolean operator at line 574",
+          "killed": true,
+          "reward": 0.0,
+          "error": ""
+        },
+        {
+          "mutant_id": "M06",
+          "operator": "ReturnNone",
+          "file_path": "src/click/decorators.py",
+          "lineno": 580,
+          "description": "Replace return value with None at line 580",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "task_id": "task_05_atomic_safe_stream",
+      "total_mutants": 3,
+      "killed_mutants": 3,
+      "survived_mutants": 0,
+      "kill_rate": 1.0,
+      "outcomes": [
+        {
+          "mutant_id": "M01",
+          "operator": "RaiseDrop",
+          "file_path": "src/click/_compat.py",
+          "lineno": 650,
+          "description": "Replace raise with pass at line 650",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M02",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/_compat.py",
+          "lineno": 636,
+          "description": "Mutate constant True at line 636",
+          "killed": true,
+          "reward": 0.5,
+          "error": ""
+        },
+        {
+          "mutant_id": "M03",
+          "operator": "ConstantMutate",
+          "file_path": "src/click/_compat.py",
+          "lineno": 636,
+          "description": "Mutate constant True at line 636",
+          "killed": true,
+          "reward": 0.0,
+          "error": ""
+        }
+      ]
+    }
+  ]
+}

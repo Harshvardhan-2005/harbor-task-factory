@@ -1,0 +1,4 @@
+[
+  "tests/test_hf_command_alias_deprecation.py::test_alias_resolution_and_warning",
+  "tests/test_hf_command_alias_deprecation.py::test_alias_rejects_conflicting_rebind"
+]

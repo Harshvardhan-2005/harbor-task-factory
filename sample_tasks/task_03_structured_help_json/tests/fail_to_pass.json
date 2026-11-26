@@ -1,0 +1,4 @@
+[
+  "tests/test_hf_structured_help_json.py::test_export_schema_excludes_hidden_by_default",
+  "tests/test_hf_structured_help_json.py::test_export_schema_includes_hidden_when_requested_and_sorts"
+]

@@ -1,0 +1,5 @@
+[
+  "tests/test_hf_option_mutex_groups.py::test_mutually_exclusive_allows_single_option",
+  "tests/test_hf_option_mutex_groups.py::test_mutually_exclusive_rejects_conflict",
+  "tests/test_hf_option_mutex_groups.py::test_required_together_validation"
+]
